@@ -3,9 +3,9 @@
   <head>
     <title>Dislexia</title>
     <link rel="stylesheet" type="text/css" href="src/index.css">
-    <script type="text/javascript" src="src/index.js"></script>
   </head>
   <body>
+    
     <div class="contenedor">
       <p id="preguntaini">Por favor, ingresa tu nombre:
         <input type="text" id="nombre">
@@ -20,12 +20,14 @@
         <button class="boton" onclick="agregarLetra('d')">d</button>
       </p>
       <p>
-        <button id="submit" class="submit" onclick="terminar()" style="display:none;">Mostrar</button>
+        <button id="submit" class="submit" style="display:none;">Terminar y enviar</button>
       </p>
       <p id="extras" style="display:none;">
         <button class="boton1" onclick="limpiar()">Reintentar</button>
         <button class="boton2" onclick="enviar()">Enviar</button> 
       </p>
     </div>
+    <script type="text/javascript" src="src/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </body>
 </html>

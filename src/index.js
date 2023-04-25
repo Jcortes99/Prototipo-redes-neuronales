@@ -98,21 +98,24 @@ function actualizarTextoPregunta(pregunta) {
 
 
 // Objeto JavaScript que queremos enviar en formato JSON
-const data = { 
+const datos = { 
   "name": "nombre", 
   "contador":  "numeros",
   "letras": "letrasEnviadas",
 };
 
-// Opciones para la petición fetch
-const options = {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(data),
-};
 
-// Hacer la petición fetch con los datos en formato JSON
-fetch("/", options)
+const btnGuardar = document.getElementById("submit");
+
+btnGuardar.addEventListener("click", () => {
+  fetch("/guardar-datos", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(datos)
+  })
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error(error));
+});
