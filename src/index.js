@@ -116,8 +116,12 @@ const options = {
   body: JSON.stringify(data),
 };
 
+const buttonSave = document.getElementById("submit");
+
 // Hacer la petición fetch con los datos en formato JSON
-fetch("/data", options)
+function submitInfo() {
+  fetch("/data", options)
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error(error));
+}
