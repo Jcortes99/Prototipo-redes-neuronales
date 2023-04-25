@@ -70,26 +70,33 @@ function enviar() {
       mostrarPalabraEnPantalla(palabras[indicePalabraActual]);
       actualizarTextoPregunta(preguntas[indicePalabraActual]);
     } else {
-      document.getElementById("submit").style.display = "block";
       var ayuda = "";
-      var ayuda1="Ya terminaste, lo hiciste muy bien."
-      //document.getElementById("Reintentar").style.display = "block";
+      var ayuda1="Ya terminaste, lo hiciste muy bien.";
       mostrarPalabraEnPantalla(ayuda);
       actualizarTextoPregunta(ayuda1);
       // Ocultar los botones
       document.getElementById("botones").style.display = "none";
       document.getElementById("extras").style.display = "none";
       document.getElementById("textoPantalla").style.display = "none";
-      // Mostrar boton de enviar
-      
+      document.getElementById("submit").style.display="block";
+
     }
   }
+
   
 function actualizarTextoPregunta(pregunta) {
     var preguntaT = document.getElementById("textoPregunta");
     preguntaT.innerHTML = pregunta;
 }
 
+function terminar()  {
+    var ayuda = "";
+    var ayuda1= "";
+    mostrarPalabraEnPantalla(ayuda);
+    actualizarTextoPregunta(ayuda1);
+    document.getElementById("submit").style.display="none";
+
+}
 
 
 
