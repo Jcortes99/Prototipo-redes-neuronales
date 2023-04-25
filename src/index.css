@@ -107,20 +107,20 @@
 }
 
 .submit{
-  width: 10px;
-  height: 10px;
+  width: 150px;
+  height: 60px;
   margin: 10px;
   padding: 0;
-  left: 90px; 
-  top: 130px;
+  left: 150px; 
+  top: 20px;
   font-size: 24px;
   font-weight: bold;
-  background-color: #2898ee;
+  background-color:  rgb(44, 243, 140);
   border: 3px solid #000;
   display:inline-block;
   justify-content: center;
   align-items: center;
   align-self: center;
   text-align: center;
-  position: relative;
+  position: relative; 
 }
