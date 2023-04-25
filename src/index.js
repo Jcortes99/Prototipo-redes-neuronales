@@ -1,8 +1,8 @@
-var contador = 0; //reintentar
-var nombre= ""; 
-var letraActual=""; //send
-var letrasEnviadas=[]; //
-var numeros = []; //count list
+var contador = 0;
+var nombre= "";
+var letraActual="";
+var letrasEnviadas=[];
+var numeros = [];
 var indicePalabraActual = 0;
 var palabras = ["_oda", "vi_a", "_ueso", "_urro","_erro","de_o","_igote","_iente","_aloma","_olor"];
 var preguntas = [
@@ -26,7 +26,6 @@ function continuar() {
       document.getElementById("botones").style.display = "block";
       document.getElementById("extras").style.display = "block";
       document.getElementById("preguntaini").style.display = "none";
-      document.getElementById("submit").style.display = "none";
       actualizarTextoPregunta(preguntas[indicePalabraActual]);
       mostrarPalabraEnPantalla(palabras[indicePalabraActual]);
     }
@@ -82,8 +81,6 @@ function enviar() {
 
     }
   }
-
-  
 function actualizarTextoPregunta(pregunta) {
     var preguntaT = document.getElementById("textoPregunta");
     preguntaT.innerHTML = pregunta;
@@ -97,6 +94,7 @@ function terminar()  {
     document.getElementById("submit").style.display="none";
 
 }
+ 
 
 
 
